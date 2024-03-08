@@ -1,0 +1,32 @@
+<p>
+  <mat-toolbar>
+    <button
+      (click)="popup()"
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>OnlyNews</span>
+    <span class="example-spacer"></span>
+    <p style="padding: 3%">Euro:{{ euro }}</p>
+    <p style="padding: 3%">Dolar:{{ dolar }}</p>
+    <button
+      (click)="deneme()"
+      mat-icon-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
+    >
+      <mat-icon>A</mat-icon>
+    </button>
+    <button
+      (click)="github()"
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
+      <mat-icon>G</mat-icon>
+    </button>
+  </mat-toolbar>
+</p>

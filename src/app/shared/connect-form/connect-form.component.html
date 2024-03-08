@@ -1,0 +1,21 @@
+<div class="formContainer">
+  <h3 class="formTitle">Bültenimize Abone Olun</h3>
+  <form class="KullaniciForm" (ngSubmit)="send()" [formGroup]="Iletisim">
+    <mat-form-field class="example-full-width">
+      <mat-label>Adınız:</mat-label>
+      <input matInput formControlName="name" type="text" />
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Mail:</mat-label>
+      <input matInput formControlName="mail" type="email" />
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Mesajınız</mat-label>
+      <input matInput formControlName="message" type="text" />
+    </mat-form-field>
+
+    <button mat-flat-button color="primary" type="submit">Gönder</button>
+  </form>
+</div>
