@@ -1,34 +1,20 @@
-<mat-grid-list cols="2" style="padding: 5%; margin: 5%">
-  <mat-grid-tile *ngFor="let article of articles"
-    ><mat-card style="width: 90%; height: 40%">
-      <mat-card-header style="padding: 5px; height: 10%">
-        <mat-card-title>{{ article.author }}</mat-card-title>
-      </mat-card-header>
-
-      <mat-card-content style="height: 70%">
-        <img
-          *ngFor="let item of randomImages()"
-          [src]="item"
-          mat-card-avatar
-          alt=""
-        />
-        <p>
-          {{ article.title }}
-        </p>
-        <p>
-          {{ article.publishedAt }}
-        </p>
-      </mat-card-content>
-
-      <mat-card-footer style="padding-top: 5%; height: 20%">
-        <button
-          style="padding-bottom: 3%"
-          (click)="goToNews(article.url)"
-          mat-flat-button
-        >
-          Habere Git
-        </button>
-      </mat-card-footer>
-    </mat-card></mat-grid-tile
-  >
-</mat-grid-list>
+<div
+  class="card w-96 bg-base-300 shadow-xl mx-auto flex py-3 my-4 columns-2"
+  *ngFor="let article of articles"
+>
+  <figure>
+    <img *ngFor="let item of randomImages()" [src]="item" alt="Shoes" />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title">{{ article.author }}</h2>
+    <p>
+      {{ article.title }} <br />
+      {{ article.publishedAt }}
+    </p>
+    <div class="card-actions justify-end">
+      <button (click)="goToNews(article.url)" class="btn btn-primary">
+        Habere Git
+      </button>
+    </div>
+  </div>
+</div>

@@ -37,8 +37,8 @@ export class ConnectFormComponent {
     console.log(this.Iletisim.value);
   }
   async send() {
-    emailjs.init('public_key');
-    let response = await emailjs.send('service_key', 'template_key', {
+    emailjs.init('GozrXfAHkJInXsFHt');
+    let response = await emailjs.send('service_s3dpkwy', 'template_criow3w', {
       name: this.Iletisim.value.name,
       message: this.Iletisim.value.message,
       mail: this.Iletisim.value.mail,

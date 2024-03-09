@@ -41,7 +41,8 @@ export class NewsComponent implements OnInit {
   ];
   randomIndex: number;
   resimyolu: string;
-  x = 'https://newsapi.org/v2/top-headlines?country=tr&apiKey={{your_key}}';
+  x =
+    'https://newsapi.org/v2/top-headlines?country=tr&apiKey=6ab20bc93aba4e70bb1ba304fbc32569';
 
   constructor(private httpClient: HttpClient) {}
 

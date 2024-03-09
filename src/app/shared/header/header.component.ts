@@ -17,12 +17,21 @@ export class HeaderComponent implements OnInit {
   dovizata: any[];
   dolar: number;
   euro: number;
+  yen: number;
+  ruble: number;
+  gumus: number;
+  ons: number;
+  altın: number;
 
   constructor(private httpClient: HttpClient) {}
   ngOnInit(): void {
     this.httpClient.get(this.dovizLink).subscribe((data: any) => {
       this.dolar = data.USD.Alış;
       this.euro = data.EUR.Alış;
+      this.yen = data.JPY.Alış;
+      this.ruble = data.RUB.Alış;
+      this.gumus = data.gumus.Alış;
+      this.ons = data.ons.Alış;
     });
   }
   deneme() {
@@ -39,5 +48,10 @@ export class HeaderComponent implements OnInit {
 
   popup() {
     alert('soon..');
+  }
+  isChecked = false;
+
+  toggleTheme() {
+    this.isChecked = !this.isChecked;
   }
 }
